@@ -1,3 +1,4 @@
+'use strict';
 import Person from '../practice_1/person';
 
 export default class Teacher extends Person {
