@@ -5,7 +5,7 @@ export default class StudentWithClass extends Student {
 
     };
     get className() {
-        return this.klass.number;
+        return `Class ${this.klass.number}`;
     }
 
 }
