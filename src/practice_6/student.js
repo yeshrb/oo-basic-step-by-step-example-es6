@@ -7,10 +7,10 @@ export default class Student extends Person {
         this.klass = klass;
     };
 
-    get classNumber() {
-        return this.klass;
+    get className() {
+        return `Class ${this.klass}`;
     }
     introduce(){
-        return super.introduce() + ` I am a ${this.name}. I am at Class ${this.classNumber}.`;
+        return super.introduce() + ` I am a Student. I am at ${this.className}.`;
     }
 };

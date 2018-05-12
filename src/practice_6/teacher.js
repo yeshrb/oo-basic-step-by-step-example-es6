@@ -7,8 +7,11 @@ export default class Teacher extends Person {
         this.klass = klass;
     }
 
+    get className(){
+        return this.klass;
+    }
     introduce(){
-        let clss = this.klass? `Class ${this.klass}` :`No Class`
+        let clss = this.className? `Class ${this.className}` :`No Class`
         return super.introduce() + ` I am a Teacher. I teach ${clss}.`;
     }
 };
