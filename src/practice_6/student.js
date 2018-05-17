@@ -1,16 +1,21 @@
 'use strict';
-import Person from '../practice_1/person';
+import StudentBase from '../practice_2/student';
 
-export default class Student extends Person {
-    constructor(name,age,klass){
-        super(name,age);
-        this.klass = klass;
-    };
+export default class Student extends StudentBase {
 
-    get className() {
-        return `Class ${this.klass}`;
+    get classNumber() {
+        return `${this.klass}`;
     }
-    introduce(){
-        return super.introduce() + ` I am a Student. I am at ${this.className}.`;
+
+    self_introduce() {
+        return `I am a Student. I am at Class ${this.classNumber}.`;
     }
+
+    introduce() {
+        return this.base_introduce() + ' ' + this.self_introduce();
+    }
+
+
+
+
 };

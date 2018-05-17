@@ -1,12 +1,7 @@
-import Person from '../practice_1/person';
+import StudentBase from '../practice_2/student';
 
-export default class Student extends Person {
-    constructor(name,age,klass){
-        super(name,age);
-        this.klass = klass;
-    }
-
+export default class Student extends StudentBase {
     introduce(){
-        return super.introduce() + ` I am a Student. I am at Class ${this.klass}.`;
+        return super.base_introduce()+' '+super.self_introduce();
     }
 };

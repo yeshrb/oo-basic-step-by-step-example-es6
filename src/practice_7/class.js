@@ -3,6 +3,9 @@ export default class Class {
         this.number = num;
     }
     getDisplayName() {
-        return `Class ${this.number}`;
+        return `Class ${this.classNumber}`;
+    }
+    get classNumber(){
+        return `${this.number}`;
     }
 }
